@@ -26,6 +26,12 @@ const Footer = () => {
               Skills
             </a>
             <a
+              href="#blog"
+              className="text-sm text-muted-foreground hover:text-foreground transition-smooth"
+            >
+              Blog
+            </a>
+            <a
               href="#contact"
               className="text-sm text-muted-foreground hover:text-foreground transition-smooth"
             >

@@ -52,7 +52,7 @@ const Contact = () => {
 
               <div className="flex gap-4 pt-4">
                 <a
-                  href="https://linkedin.com"
+                  href="https://linkedin.com/in/yourprofile"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:shadow-soft transition-smooth"
@@ -60,7 +60,7 @@ const Contact = () => {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/yourprofile"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:shadow-soft transition-smooth"
