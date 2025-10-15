@@ -3,25 +3,28 @@ import { Button } from "./ui/button";
 
 const blogPosts = [
   {
-    title: "Advanced SQL Injection Techniques in Modern Web Applications",
-    excerpt: "Exploring sophisticated SQL injection vectors that bypass modern web application firewalls and security controls. Learn about second-order injections and time-based blind techniques.",
+    title: "Four Ways We Authenticate in a Zero-Trust World",
+    excerpt: "Understanding how systems verify identity in a zero-trust world — a practical guide to cookies, mTLS, and OpenID Connect.",
     date: "2024-12-15",
     readTime: "8 min read",
-    tags: ["Web Security", "OWASP", "Penetration Testing"],
+    tags: ["Identity", "Zero Trust", "Authn"],
+    url: "https://medium.com/@suryaprakashgeesala/authentication-mechanisms-d1d9cb97f36e",
   },
   {
-    title: "Building a Secure CI/CD Pipeline: Lessons from the Field",
-    excerpt: "A comprehensive guide to integrating security into your DevOps workflow. From SAST/DAST implementation to automated vulnerability scanning and remediation tracking.",
+    title: "5 Surprising Lessons from the World of AppSec",
+    excerpt: "A personal take on what most people get wrong about application security and what actually keeps systems safe today",
     date: "2024-11-28",
-    readTime: "12 min read",
-    tags: ["DevSecOps", "CI/CD", "Security Engineering"],
+    readTime: "10 min read",
+    tags: ["Application Security","CI/CD", "Security Engineering"],
+    url: "https://medium.com/@suryaprakashgeesala/5-surprising-lessons-from-the-world-of-appsec-1141ddf3256e",
   },
   {
     title: "OSCP Journey: From Beginner to Certified Professional",
     excerpt: "My complete OSCP preparation guide covering study materials, lab strategies, and exam-day tips. Everything you need to know to pass on your first attempt.",
     date: "2024-10-20",
-    readTime: "15 min read",
+    readTime: "5 min read",
     tags: ["Certifications", "OSCP", "Career"],
+    url: "https://medium.com/@suryaprakashgeesala/oscp-journey-and-everything-else-c7b806906f5b",
   },
 ];
 
@@ -87,7 +90,9 @@ const Blog = () => {
                 </div>
 
                 <a
-                  href="#"
+                  href={post.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-primary font-semibold text-sm group-hover:gap-3 transition-smooth"
                 >
                   Read More

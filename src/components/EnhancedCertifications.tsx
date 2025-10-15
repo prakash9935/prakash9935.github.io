@@ -10,7 +10,7 @@ const certifications = [
     description: "Industry-leading hands-on penetration testing certification",
     color: "from-red-500 to-orange-500",
     verifyUrl: "https://credentials.offsec.com/63fbff35-07ea-403b-8980-e8255df4bd81",
-    credentialId: "OS-101-56847",
+    credentialId: "OS-101-68421",
   },
   {
     name: "CompTIA PenTest+",
@@ -19,7 +19,7 @@ const certifications = [
     description: "Comprehensive penetration testing and vulnerability assessment",
     color: "from-blue-500 to-cyan-500",
     verifyUrl: "https://www.credly.com/badges/09095c7e-9404-42e7-8a82-046dcfbf8811/public_url",
-    credentialId: "VTVJFZFNLMQ41ETW",
+    credentialId: "COMP001022870381",
   },
   {
     name: "Certified Red Team Operator",
@@ -27,8 +27,8 @@ const certifications = [
     issuer: "Zero-Point Security",
     description: "Advanced red team operations and adversary simulation",
     color: "from-purple-500 to-pink-500",
-    verifyUrl: "https://www.credential.net/your-crto-credential",
-    credentialId: "CRTO-XXXXX",
+
+
   },
   {
     name: "Certified Ethical Hacker",
@@ -37,7 +37,7 @@ const certifications = [
     description: "Ethical hacking techniques and security assessment methodology",
     color: "from-green-500 to-teal-500",
     verifyUrl: "https://aspen.eccouncil.org/VerifyBadge?type=certification&a=XXXXXXXX",
-    credentialId: "ECC-XXXXX",
+    credentialId: "ECC-7326849510",
   },
 ];
 
@@ -81,7 +81,7 @@ const EnhancedCertifications = () => {
                 asChild
               >
                 <a
-                  href="https://app.hackthebox.com/profile/yourusername"
+                  href="https://app.hackthebox.com/profile/1610351"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -124,19 +124,23 @@ const EnhancedCertifications = () => {
                     <p className="text-sm text-muted-foreground mb-2">{cert.issuer}</p>
                     <p className="text-sm text-muted-foreground mb-4">{cert.description}</p>
                     
-                    <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3">
-                      <span className="font-mono">ID: {cert.credentialId}</span>
-                    </div>
+                    {cert.credentialId && (
+                      <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3">
+                        <span className="font-mono">ID: {cert.credentialId}</span>
+                      </div>
+                    )}
 
-                    <a
-                      href={cert.verifyUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-primary text-sm font-semibold hover:gap-2.5 transition-smooth"
-                    >
-                      Verify Credential
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
+                    {cert.verifyUrl && (
+                      <a
+                        href={cert.verifyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-primary text-sm font-semibold hover:gap-2.5 transition-smooth"
+                      >
+                        Verify Credential
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.div>

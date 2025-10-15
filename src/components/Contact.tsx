@@ -4,6 +4,17 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 
 const Contact = () => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const name = (data.get("name") as string) || "";
+    const email = (data.get("email") as string) || "";
+    const message = (data.get("message") as string) || "";
+    const subject = encodeURIComponent(`Portfolio Contact — ${name || "Inquiry"}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+    window.location.href = `mailto:geesala.s@northeastern.edu?subject=${subject}&body=${body}`;
+  };
   return (
     <section id="contact" className="py-24 md:py-32">
       <div className="container mx-auto px-6">
@@ -37,18 +48,7 @@ const Contact = () => {
                 </div>
               </a>
 
-              <a
-                href="tel:+14086809897"
-                className="flex items-center gap-4 p-4 glass rounded-2xl hover:shadow-soft transition-smooth group"
-              >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-smooth">
-                  <Phone className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <div className="text-sm text-muted-foreground">Phone</div>
-                  <div className="font-medium">+1 (408) 680-9897</div>
-                </div>
-              </a>
+              {/* Phone removed by request */}
 
               <div className="flex gap-4 pt-4">
                 <a
@@ -60,7 +60,7 @@ const Contact = () => {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://github.com/suryaGeesala"
+                  href="https://github.com/prakash9935"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:shadow-soft transition-smooth"
@@ -71,51 +71,38 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <Input
                   type="text"
+                  name="name"
                   placeholder="Your Name"
+                  required
                   className="rounded-xl h-12"
                 />
               </div>
               <div>
                 <Input
                   type="email"
+                  name="email"
                   placeholder="Your Email"
+                  required
                   className="rounded-xl h-12"
                 />
               </div>
               <div>
                 <Textarea
+                  name="message"
                   placeholder="Your Message"
+                  required
                   className="rounded-xl min-h-32"
                 />
               </div>
-              <Button className="w-full rounded-xl h-12">Send Message</Button>
+              <Button type="submit" className="w-full rounded-xl h-12">Send Message</Button>
             </form>
           </div>
 
-          {/* Education */}
-          <div className="glass rounded-3xl p-8 shadow-soft">
-            <h4 className="text-xl font-bold mb-6">Education</h4>
-            <div className="space-y-6">
-              <div>
-                <div className="text-lg font-semibold">Master of Science in Cybersecurity</div>
-                <div className="text-primary font-medium">Northeastern University, Boston, MA</div>
-                <div className="text-sm text-muted-foreground mt-1">
-                  Jan 2023 – Apr 2025 | GPA: 3.84/4.0
-                </div>
-              </div>
-              <div>
-                <div className="text-lg font-semibold">B.Tech in Computer Science</div>
-                <div className="text-primary font-medium">GITAM University, Visakhapatnam, India</div>
-                <div className="text-sm text-muted-foreground mt-1">
-                  May 2016 – Apr 2020 | GPA: 8.9/10
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Education moved to dedicated section */}
         </div>
       </div>
     </section>

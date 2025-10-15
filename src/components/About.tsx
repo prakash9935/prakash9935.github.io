@@ -24,23 +24,9 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <p>
-              I'm a Security Engineer with 3+ years of experience specializing in penetration testing, 
-              vulnerability management, and secure software development. Currently pursuing my Master's 
-              in Cybersecurity at Northeastern University, I bring real-world enterprise security 
-              expertise from companies like Entegris and Deloitte.
-            </p>
-            <p>
-              My approach combines offensive security techniques with a deep understanding of secure 
-              development practices. I've architected vulnerability management programs across 12,000+ 
-              assets, integrated security into CI/CD pipelines, and helped organizations achieve 
-              compliance with ISO 27001, SOC 2, and PCI DSS standards.
-            </p>
-            <p>
-              With certifications including OSCP, CRTO, and CEH, I stay at the forefront of security 
-              research and techniques. My passion lies in finding vulnerabilities before attackers do 
-              and building security into every layer of an organization's infrastructure.
-            </p>
+            <p> I’m a Security Engineer with over three years of experience in application security, security operations, and penetration testing. I earned my Master’s in Cybersecurity from Northeastern University and have worked on enterprise security projects at Entegris and Deloitte. </p> 
+            <p> I take a hands-on approach, combining offensive testing with secure development practices. I’ve helped build vulnerability management programs, integrated security into CI/CD pipelines, and supported organizations in meeting compliance standards like ISO 27001, SOC 2, and PCI DSS. </p> 
+            <p> Certified in OSCP, CRTO, and CEH, I focus on improving security posture across applications and infrastructure. </p>
           </motion.div>
 
           <motion.div

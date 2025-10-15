@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Linkedin } from "lucide-react";
 import { Button } from "./ui/button";
 import ThemeToggle from "./ThemeToggle";
 
@@ -18,6 +18,7 @@ const Navigation = () => {
   const navLinks = [
     { label: "About", href: "#about" },
     { label: "Experience", href: "#experience" },
+    { label: "Education", href: "#education" },
     { label: "Skills", href: "#skills" },
     { label: "Projects", href: "#projects" },
     { label: "Blog", href: "#blog" },
@@ -49,11 +50,15 @@ const Navigation = () => {
               </a>
             ))}
             <ThemeToggle />
-            <Button size="sm" variant="outline" className="rounded-full" asChild>
-              <a href="https://www.linkedin.com/in/surya-prakash-geesala/" target="_blank" rel="noopener noreferrer">
-                LinkedIn
-              </a>
-            </Button>
+            <a
+              href="https://www.linkedin.com/in/surya-prakash-geesala/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-input text-foreground/80 hover:text-foreground hover:bg-accent transition-smooth"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-4.5 h-4.5" />
+            </a>
             <Button size="sm" className="rounded-full" asChild>
               <a href="#contact">Get in Touch</a>
             </Button>
@@ -84,11 +89,15 @@ const Navigation = () => {
                   {link.label}
                 </a>
               ))}
-              <Button size="sm" variant="outline" className="rounded-full w-full" asChild>
-                <a href="https://www.linkedin.com/in/surya-prakash-geesala/" target="_blank" rel="noopener noreferrer">
-                  LinkedIn
-                </a>
-              </Button>
+              <a
+                href="https://www.linkedin.com/in/surya-prakash-geesala/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-12 h-12 rounded-xl glass hover:shadow-soft transition-smooth"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
               <Button size="sm" className="rounded-full w-full" asChild>
                 <a href="#contact">Get in Touch</a>
               </Button>

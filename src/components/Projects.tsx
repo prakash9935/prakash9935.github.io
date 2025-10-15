@@ -3,36 +3,67 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "Enterprise Vulnerability Management System",
+    title: "OWASP crAPI (REST API Vulnerability Analysis)",
     description:
-      "Architected and deployed comprehensive vulnerability management across 12,000+ assets using Tenable and Microsoft Sentinel. Integrated CISA KEV and MISP threat intelligence for prioritized remediation.",
-    technologies: ["Tenable", "Microsoft Sentinel", "Python", "MISP"],
-    impact: "40% faster patch deployment for critical vulnerabilities",
+      "Identified security vulnerabilities in web APIs by mapping endpoints, analyzing traffic for data leaks, and testing authentication controls. Bypassed API authorization logic (BOLA, BFLA) and successfully exploited SSRF and Mass Assignment vulnerabilities in a lab environment.",
+    technologies: [
+      "OWASP crAPI",
+      "REST API",
+      "BOLA",
+      "BFLA",
+      "SSRF",
+      "Mass Assignment",
+      "Auth Testing",
+    ],
+    impact: "Demonstrated end-to-end API abuse paths and mitigation priorities",
     color: "from-blue-500 to-cyan-500",
   },
   {
-    title: "Secure CI/CD Pipeline Integration",
+    title: "LLM Security Gateway",
     description:
-      "Implemented SAST/DAST security scanning within CI/CD pipeline using Snyk and Burp Suite Enterprise. Achieved significant reduction in production security findings through shift-left practices.",
-    technologies: ["Snyk", "Burp Suite", "Jenkins", "GitHub Actions"],
-    impact: "65% reduction in production security findings",
+      "Developed a centralized GenAI security gateway to securely process user prompts for LLMs (OpenAI, Anthropic, AWS Bedrock). Intercepts prompts before they reach providers, using llm-guard for input/output validation to prevent jailbreaks. Integrated LangFuse to observe content policy violations across model providers, enabling prompt-level debugging and monitoring.",
+    technologies: [
+      "llm-guard",
+      "OpenAI",
+      "Anthropic",
+      "AWS Bedrock",
+      "LangFuse",
+      "Prompt Security",
+    ],
+    impact: "Reduced jailbreak risk and added cross-provider observability",
     color: "from-purple-500 to-pink-500",
   },
   {
-    title: "API Security Framework",
+    title: "ABAC and RBAC Cloud & Kubernetes Security",
     description:
-      "Developed comprehensive API security framework with authentication validation, input sanitization, and rate limiting. Reduced security incidents significantly in production environments.",
-    technologies: ["Python", "REST APIs", "OAuth", "Rate Limiting"],
-    impact: "75% reduction in production security incidents",
-    color: "from-green-500 to-emerald-500",
+      "Simulated cloud attacks in AWS targeting S3 misconfigurations and IAM privilege escalation paths. Configured and exploited Kubernetes pods/clusters locally to demonstrate hardening techniques for containerized workloads.",
+    technologies: [
+      "AWS",
+      "S3",
+      "IAM",
+      "Kubernetes",
+      "Containers",
+      "RBAC",
+      "ABAC",
+    ],
+    impact: "Documented misconfiguration findings and produced hardening guidance for cloud and k8s.",
+    color: "from-amber-500 to-orange-600",
+    showActions: false,
   },
   {
-    title: "Automated Security Testing Suite",
+    title: "Regex DoS and Side-Channel Attacks",
     description:
-      "Engineered automated security testing framework using Python and REST APIs. Dramatically reduced manual assessment time while improving vulnerability scan coverage.",
-    technologies: ["Python", "REST APIs", "Selenium", "OWASP ZAP"],
-    impact: "60% reduction in manual testing time",
-    color: "from-orange-500 to-red-500",
+      "Devised a RegEx Denial of Service vector to bypass an authentication form in a lab setup using algorithmic complexity analysis. Automated a Python-based side-channel attack on a sample social platform to infer hidden information.",
+    technologies: [
+      "Regex DoS",
+      "Algorithmic Complexity",
+      "Side-Channel",
+      "Python",
+      "AppSec",
+    ],
+    impact: "Showcased exploit feasibility and provided mitigations for input validation and timing leaks.",
+    color: "from-emerald-500 to-teal-600",
+    showActions: false,
   },
 ];
 
@@ -85,16 +116,18 @@ const Projects = () => {
                   <div className="text-sm text-muted-foreground">{project.impact}</div>
                 </div>
 
-                <div className="flex gap-3 mt-6 relative z-10">
-                  <button className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth">
-                    <Github className="w-4 h-4" />
-                    View Code
-                  </button>
-                  <button className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth">
-                    <ExternalLink className="w-4 h-4" />
-                    Learn More
-                  </button>
-                </div>
+                {project.showActions !== false && (
+                  <div className="flex gap-3 mt-6 relative z-10">
+                    <button className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth">
+                      <Github className="w-4 h-4" />
+                      View Code
+                    </button>
+                    <button className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth">
+                      <ExternalLink className="w-4 h-4" />
+                      Learn More
+                    </button>
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>

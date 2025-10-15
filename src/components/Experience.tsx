@@ -7,10 +7,10 @@ const experiences = [
     location: "Billerica, MA, USA",
     period: "Jan 2024 – Dec 2024",
     achievements: [
-      "Monitored organizational infrastructure using Secureworks and TrendMicro, drafting SOPs and Root Cause Analysis reports",
-      "Implemented vulnerability management program using Tenable and Microsoft Sentinel across 12,000+ assets, achieving 40% faster patch deployment",
-      "Architected SAST/DAST integration in CI/CD pipeline with Snyk and Burp Suite, reducing production security findings by 65%",
-      "Automated security workflows using Microsoft Graph API and JIRA, saving 15 hours per week",
+      "Monitored organizational infrastructure using Secureworks and TrendMicro, drafting SOPs and Root Cause Analysis ",
+      "Implemented vulnerability management program using Tenable and Microsoft Sentinel, improving patch deployment ",
+      "Architected SAST/DAST integration in CI/CD pipeline with Snyk and Burp Suite to shift security left",
+      "Automated security workflows using Microsoft Graph API and JIRA to streamline operations",
     ],
   },
   {
@@ -19,10 +19,13 @@ const experiences = [
     location: "Hyderabad, India",
     period: "May 2020 – Dec 2022",
     achievements: [
-      "Led enterprise security assessments using OWASP ZAP, Burp Suite, and Python scripts, identifying 50+ critical vulnerabilities",
-      "Implemented SSDLC practices through threat modeling (STRIDE), achieving ISO 27001 and SOC 2 compliance",
-      "Developed API security framework incorporating authentication validation and rate limiting, reducing incidents by 75%",
-      "Assisted live incident response and mapped findings to MITRE ATT&CK for threat attribution",
+      "Built and led application security programs covering threat modeling, risk assessments, and secure development practices.",
+      "Integrated tools like SonarQube, Snyk, and Checkmarx into the SDLC to improve code security and quality.",
+      "Performed penetration testing and secure code reviews for web applications and APIs using Burp Suite and Veracode.",
+      "Deployed WAF protection and managed vulnerabilities with Qualys to strengthen overall application defenses.",
+      "Created Python scripts to automate exploit chains for web applications.",
+      "Trained developers on OWASP Top 10, secure authentication, and input validation best practices.",
+
     ],
   },
   {
@@ -31,8 +34,8 @@ const experiences = [
     location: "Hyderabad, India",
     period: "Jan 2019 – Jun 2019",
     achievements: [
-      "Engineered automated security testing framework using Python and REST APIs, reducing manual assessment time by 60%",
-      "Researched advanced website fuzzing techniques and recommended security improvements",
+      "Created Python tools that automate security testing using REST APIs.",
+"Explored web fuzzing and exploit techniques to find vulnerabilities and suggest fixes"
     ],
   },
 ];

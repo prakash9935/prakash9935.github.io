@@ -9,6 +9,7 @@ import EnhancedCertifications from "@/components/EnhancedCertifications";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
+import Education from "@/components/Education";
 
 const Index = () => {
   return (
@@ -18,10 +19,11 @@ const Index = () => {
         <Hero />
         <About />
         <Experience />
+        <Education />
         <SkillsCarousel />
+        <EnhancedCertifications />
         <Projects />
         <Blog />
-        <EnhancedCertifications />
         <Contact />
       </main>
       <Footer />

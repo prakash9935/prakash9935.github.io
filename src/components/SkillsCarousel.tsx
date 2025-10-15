@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import carIllustration from "@/assets/car-illustration.png";
 import {
   Code2,
   Database,
@@ -29,6 +28,19 @@ const techIcons = [
   { Icon: Server, label: "Docker", color: "text-blue-400" },
   { Icon: Container, label: "Kubernetes", color: "text-blue-600" },
   { Icon: GitBranch, label: "Git", color: "text-orange-400" },
+  // Added previously static items into the scroller
+  { Icon: Code2, label: "React", color: "text-cyan-400" },
+  { Icon: Code2, label: "TypeScript", color: "text-blue-600" },
+  { Icon: Server, label: "Node.js", color: "text-green-600" },
+  { Icon: GitBranch, label: "Jenkins", color: "text-red-500" },
+  { Icon: Cloud, label: "Terraform", color: "text-purple-600" },
+  { Icon: Shield, label: "Metasploit", color: "text-rose-500" },
+  { Icon: Bug, label: "OWASP ZAP", color: "text-amber-500" },
+  { Icon: Lock, label: "Snyk", color: "text-fuchsia-500" },
+  { Icon: Shield, label: "Nessus", color: "text-emerald-500" },
+  { Icon: Cpu, label: "Ghidra", color: "text-lime-600" },
+  { Icon: Cpu, label: "IDA Pro", color: "text-slate-600" },
+  { Icon: Network, label: "Wireshark", color: "text-sky-600" },
 ];
 
 const SkillsCarousel = () => {
@@ -38,7 +50,7 @@ const SkillsCarousel = () => {
 
   useEffect(() => {
     controls.start({
-      x: [0, -2000],
+      x: [-2000, 0],
       transition: {
         x: {
           repeat: Infinity,
@@ -57,26 +69,16 @@ const SkillsCarousel = () => {
           SKILLS & EXPERTISE
         </h2>
         <h3 className="text-4xl md:text-5xl font-bold text-center mb-4">
-          Innovation Highway
+          Tools & Technologies
         </h3>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto">
-          Powered by cutting-edge technologies and security expertise
+          The security and engineering stack I use in practice
         </p>
       </div>
 
       {/* Animated Carousel */}
       <div className="relative h-[400px] md:h-[500px]" ref={containerRef}>
-        {/* Car Centerpiece */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-          <motion.img
-            src={carIllustration}
-            alt="Innovation Vehicle"
-            className="w-[400px] md:w-[600px] h-auto opacity-20 dark:opacity-10"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 0.2 }}
-            transition={{ duration: 1 }}
-          />
-        </div>
+        {/* Centerpiece removed per design request */}
 
         {/* Top Track - Icons flowing right to left */}
         <div className="absolute top-[25%] left-0 right-0 overflow-hidden">
@@ -116,7 +118,7 @@ const SkillsCarousel = () => {
           <motion.div
             className="flex gap-12 items-center"
             animate={{
-              x: [-2000, 0],
+              x: [0, -2000],
               transition: {
                 x: {
                   repeat: Infinity,
@@ -159,32 +161,7 @@ const SkillsCarousel = () => {
         <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
       </div>
 
-      {/* Additional Skills Grid Below */}
-      <div className="container mx-auto px-6 mt-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          {[
-            "React",
-            "TypeScript",
-            "Node.js",
-            "Jenkins",
-            "Terraform",
-            "Metasploit",
-            "OWASP ZAP",
-            "Snyk",
-            "Nessus",
-            "Ghidra",
-            "IDA Pro",
-            "Wireshark",
-          ].map((skill) => (
-            <div
-              key={skill}
-              className="glass rounded-xl px-4 py-3 text-center text-sm font-medium hover:shadow-soft transition-smooth"
-            >
-              {skill}
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* Static grid removed; items integrated into scroller */}
     </section>
   );
 };
