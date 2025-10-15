@@ -43,7 +43,7 @@ const Blog = () => {
               className="rounded-full hidden md:flex items-center gap-2"
               asChild
             >
-              <a href="https://blog.example.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://medium.com/@suryaprakashgeesala" target="_blank" rel="noopener noreferrer">
                 View All Posts
                 <ExternalLink className="w-4 h-4" />
               </a>
@@ -104,7 +104,7 @@ const Blog = () => {
               className="rounded-full flex items-center gap-2"
               asChild
             >
-              <a href="https://blog.example.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://medium.com/@suryaprakashgeesala" target="_blank" rel="noopener noreferrer">
                 View All Posts
                 <ExternalLink className="w-4 h-4" />
               </a>

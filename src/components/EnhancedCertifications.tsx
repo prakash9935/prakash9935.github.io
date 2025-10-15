@@ -9,17 +9,8 @@ const certifications = [
     issuer: "Offensive Security",
     description: "Industry-leading hands-on penetration testing certification",
     color: "from-red-500 to-orange-500",
-    verifyUrl: "https://www.credential.net/",
-    credentialId: "OSCP-12345",
-  },
-  {
-    name: "Certified Red Team Operator",
-    abbr: "CRTO",
-    issuer: "Zero-Point Security",
-    description: "Advanced adversary simulation and red team operations",
-    color: "from-purple-500 to-pink-500",
-    verifyUrl: "https://www.credential.net/",
-    credentialId: "CRTO-67890",
+    verifyUrl: "https://credentials.offsec.com/63fbff35-07ea-403b-8980-e8255df4bd81",
+    credentialId: "OS-101-56847",
   },
   {
     name: "CompTIA PenTest+",
@@ -27,17 +18,8 @@ const certifications = [
     issuer: "CompTIA",
     description: "Comprehensive penetration testing and vulnerability assessment",
     color: "from-blue-500 to-cyan-500",
-    verifyUrl: "https://www.comptia.org/certifications/pentest",
-    credentialId: "COMP001234567",
-  },
-  {
-    name: "Certified Ethical Hacker",
-    abbr: "CEH",
-    issuer: "EC-Council",
-    description: "Foundation in ethical hacking methodologies and tools",
-    color: "from-green-500 to-teal-500",
-    verifyUrl: "https://cert.eccouncil.org/",
-    credentialId: "ECC1234567",
+    verifyUrl: "https://www.credly.com/badges/09095c7e-9404-42e7-8a82-046dcfbf8811/public_url",
+    credentialId: "VTVJFZFNLMQ41ETW",
   },
 ];
 
@@ -93,7 +75,7 @@ const EnhancedCertifications = () => {
           </motion.div>
 
           {/* Certifications Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid gap-8">
             {certifications.map((cert, index) => (
               <motion.div
                 key={index}
