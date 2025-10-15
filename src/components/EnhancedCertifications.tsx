@@ -21,6 +21,24 @@ const certifications = [
     verifyUrl: "https://www.credly.com/badges/09095c7e-9404-42e7-8a82-046dcfbf8811/public_url",
     credentialId: "VTVJFZFNLMQ41ETW",
   },
+  {
+    name: "Certified Red Team Operator",
+    abbr: "CRTO",
+    issuer: "Zero-Point Security",
+    description: "Advanced red team operations and adversary simulation",
+    color: "from-purple-500 to-pink-500",
+    verifyUrl: "https://www.credential.net/your-crto-credential",
+    credentialId: "CRTO-XXXXX",
+  },
+  {
+    name: "Certified Ethical Hacker",
+    abbr: "CEH",
+    issuer: "EC-Council",
+    description: "Ethical hacking techniques and security assessment methodology",
+    color: "from-green-500 to-teal-500",
+    verifyUrl: "https://aspen.eccouncil.org/VerifyBadge?type=certification&a=XXXXXXXX",
+    credentialId: "ECC-XXXXX",
+  },
 ];
 
 const EnhancedCertifications = () => {

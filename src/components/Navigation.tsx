@@ -49,6 +49,11 @@ const Navigation = () => {
               </a>
             ))}
             <ThemeToggle />
+            <Button size="sm" variant="outline" className="rounded-full" asChild>
+              <a href="https://www.linkedin.com/in/surya-prakash-geesala/" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+              </a>
+            </Button>
             <Button size="sm" className="rounded-full" asChild>
               <a href="#contact">Get in Touch</a>
             </Button>
@@ -79,6 +84,11 @@ const Navigation = () => {
                   {link.label}
                 </a>
               ))}
+              <Button size="sm" variant="outline" className="rounded-full w-full" asChild>
+                <a href="https://www.linkedin.com/in/surya-prakash-geesala/" target="_blank" rel="noopener noreferrer">
+                  LinkedIn
+                </a>
+              </Button>
               <Button size="sm" className="rounded-full w-full" asChild>
                 <a href="#contact">Get in Touch</a>
               </Button>
