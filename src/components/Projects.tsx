@@ -3,35 +3,39 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "OWASP crAPI (REST API Vulnerability Analysis)",
-    description:
-      "Identified security vulnerabilities in web APIs by mapping endpoints, analyzing traffic for data leaks, and testing authentication controls. Bypassed API authorization logic (BOLA, BFLA) and successfully exploited SSRF and Mass Assignment vulnerabilities in a lab environment.",
-    technologies: [
-      "OWASP crAPI",
-      "REST API",
-      "BOLA",
-      "BFLA",
-      "SSRF",
-      "Mass Assignment",
-      "Auth Testing",
-    ],
-    impact: "Demonstrated end-to-end API abuse paths and mitigation priorities",
-    color: "from-blue-500 to-cyan-500",
-  },
+    title: "Recon Assistant",
+  description:
+    "An AI-powered external reconnaissance assistant that autonomously chains security tools to map attack surfaces. Claude acts as the orchestrator, deciding which tools to invoke next based on user input. The tools include subfinder, httpx, gau, trufflehog, nuclei, nmap and more via a multi-container MCP server architecture. Designed for authorized bug bounty and pentest engagements.",
+  technologies: [
+    "Python",
+    "Claude AI",
+    "FastMCP",
+    "Docker",
+    "Nuclei",
+    "Subfinder",
+    "TruffleHog",
+    "ChromaDB",
+  ],
+  impact:
+    "Automates the external recon pipeline for bug bounty and pentest engagements, streamlining subdomain enumeration, live host probing, historical URL discovery, secret scanning, and vulnerability scanning to reducing hours of manual tooling to a single natural-language goal.",
+  color: "from-red-600 to-red-800",
+  github: "https://github.com/prakash9935/pentest-assistantt",
+},
   {
-    title: "LLM Security Gateway",
+    title: "Flipped: Personal Film Journal",
     description:
-      "Developed a centralized GenAI security gateway to securely process user prompts for LLMs (OpenAI, Anthropic, AWS Bedrock). Intercepts prompts before they reach providers, using llm-guard for input/output validation to prevent jailbreaks. Integrated LangFuse to observe content policy violations across model providers, enabling prompt-level debugging and monitoring.",
+      "A full-stack film journaling web app built for cinephiles who want more than a watchlist. Flipped lets you log films with diary entries, ratings, and mood notes; organise your collection into custom shelves; save memorable quotes with Wikiquote integration; and pin cinematography stills as a polaroid-style shots board. The app features TMDB-powered film search and discovery, Supabase authentication with inactivity-based session timeout, and a handcrafted diary aesthetic design system.",
     technologies: [
-      "llm-guard",
-      "OpenAI",
-      "Anthropic",
-      "AWS Bedrock",
-      "LangFuse",
-      "Prompt Security",
+      "Next.js 15",
+      "TypeScript",
+      "Supabase",
+      "Prisma",
+      "Tailwind CSS",
+      "Vercel",
     ],
-    impact: "Reduced jailbreak risk and added cross-provider observability",
-    color: "from-purple-500 to-pink-500",
+    impact: "Created a comprehensive film journaling platform with rich features for personal movie tracking and discovery",
+    color: "from-red-500 to-pink-500",
+    liveSite: "https://flipped-gamma.vercel.app/",
   },
   {
     title: "ABAC and RBAC Cloud & Kubernetes Security",
@@ -118,14 +122,28 @@ const Projects = () => {
 
                 {project.showActions !== false && (
                   <div className="flex gap-3 mt-6 relative z-10">
-                    <button className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth">
-                      <Github className="w-4 h-4" />
-                      View Code
-                    </button>
-                    <button className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth">
-                      <ExternalLink className="w-4 h-4" />
-                      Learn More
-                    </button>
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth"
+                      >
+                        <Github className="w-4 h-4" />
+                        View Code
+                      </a>
+                    )}
+                    {project.liveSite && (
+                      <a
+                        href={project.liveSite}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Live Site
+                      </a>
+                    )}
                   </div>
                 )}
               </motion.div>

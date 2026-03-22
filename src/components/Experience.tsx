@@ -2,40 +2,46 @@ import { Briefcase, MapPin } from "lucide-react";
 
 const experiences = [
   {
-    company: "Entegris",
-    role: "Security Engineer",
-    location: "Billerica, MA, USA",
-    period: "Jan 2024 – Dec 2024",
+    company: "Northeastern University",
+    role: "Security Research Assistant – Adversarial Security Testing",
+    location: "Boston, MA",
+    period: "Jul 2025 – Present",
     achievements: [
-      "Monitored organizational infrastructure using Secureworks and TrendMicro, drafting SOPs and Root Cause Analysis ",
-      "Implemented vulnerability management program using Tenable and Microsoft Sentinel, improving patch deployment ",
-      "Architected SAST/DAST integration in CI/CD pipeline with Snyk and Burp Suite to shift security left",
-      "Automated security workflows using Microsoft Graph API and JIRA to streamline operations",
+      "Researched exploitation techniques for modern application architectures, developing proof-of-concept exploits for business logic flaws, authentication bypasses, and behavioral vulnerabilities",
+      "Built reusable adversarial testing tools and attack libraries in Python for identifying complex vulnerability patterns including SSRF, deserialization attacks, and authorization bypass",
+    ],
+  },
+  {
+    company: "Entegris",
+    role: "Security Engineer Co-op – Offensive Security & Red Teaming",
+    location: "Billerica, MA, USA",
+    period: "Jan 2024 – Sep 2024",
+    achievements: [
+      "Executed red-teaming exercises against 25+ web applications and APIs, identifying 50+ critical vulnerabilities including BOLA, BFLA, privilege escalation, and business logic flaws",
+      "Conducted threat modeling using STRIDE methodology and developed 5 custom Python tools for automated vulnerability detection, achieving 95% remediation rate",
+      "Performed AWS cloud security assessments evaluating Lambda functions, API Gateway, S3, and IAM configurations for misconfigurations and privilege escalation paths",
     ],
   },
   {
     company: "Deloitte",
-    role: "Security Engineer (USI Advisory)",
+    role: "Security Consultant ",
     location: "Hyderabad, India",
-    period: "May 2020 – Dec 2022",
+    period: "Nov 2020 – Dec 2022",
     achievements: [
-      "Built and led application security programs covering threat modeling, risk assessments, and secure development practices.",
-      "Integrated tools like SonarQube, Snyk, and Checkmarx into the SDLC to improve code security and quality.",
-      "Performed penetration testing and secure code reviews for web applications and APIs using Burp Suite and Veracode.",
-      "Deployed WAF protection and managed vulnerabilities with Qualys to strengthen overall application defenses.",
-      "Created Python scripts to automate exploit chains for web applications.",
-      "Trained developers on OWASP Top 10, secure authentication, and input validation best practices.",
-
+      "Delivered 40+ adversarial security assessments following OWASP methodologies, identifying critical vulnerabilities in authentication, authorization, and business logic",
+      "Performed comprehensive API security testing on REST, GraphQL, and SOAP APIs, exploiting vulnerabilities including broken authentication and excessive data exposure",
+      "Conducted secure architecture reviews and threat modeling sessions, analyzing service workflows and trust boundaries to identify systemic security weaknesses",
+      "Executed source code security reviews using automated tools (Fortify, Checkmarx, SonarQube) and built automated testing frameworks for continuous security assessment",
     ],
   },
   {
     company: "Sonata Software",
-    role: "Security Analyst Intern",
+    role: "Security Testing Intern",
     location: "Hyderabad, India",
     period: "Jan 2019 – Jun 2019",
     achievements: [
-      "Created Python tools that automate security testing using REST APIs.",
-"Explored web fuzzing and exploit techniques to find vulnerabilities and suggest fixes"
+      "Conducted offensive security testing identifying OWASP Top 10 vulnerabilities including SQL injection, XSS, CSRF, and broken authentication using Burp Suite",
+      "Assisted in API security assessments performing authentication testing, authorization bypass attempts, and business logic flaw identification for RESTful services",
     ],
   },
 ];
