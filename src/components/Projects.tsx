@@ -3,6 +3,25 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "Vegapunk: AI-Powered SIEM Analysis Agent",
+    description:
+      "An end-to-end autonomous threat triage pipeline that integrates Wazuh Cloud via the OpenSearch Dashboards internal API, normalizes raw SIEM alerts and chunks them by 15-minute time windows, and stores them dual-indexed in ChromaDB and SQLite for both semantic and structured retrieval. Features a two-stage AI analysis engine using Claude Haiku for high-throughput triage with automatic escalation to Claude Sonnet for deep root-cause analysis. Includes a LangGraph ReAct conversational analyst agent with vector similarity search, SQL aggregation, and MITRE ATT&CK lookup backends.",
+    technologies: [
+      "Python",
+      "LangGraph",
+      "Claude AI",
+      "ChromaDB",
+      "SQLite",
+      "Wazuh",
+      "OpenSearch",
+      "MITRE ATT&CK",
+    ],
+    impact:
+      "Automates SIEM alert triage with AI-driven severity classification and MITRE ATT&CK tactic tagging, enabling natural-language threat hunting queries over full alert history and cutting manual analysis time significantly.",
+    color: "from-violet-600 to-purple-800",
+    github: "https://github.com/prakash9935/Vegapunk",
+  },
+  {
     title: "Recon Assistant",
   description:
     "An AI-powered external reconnaissance assistant that autonomously chains security tools to map attack surfaces. Claude acts as the orchestrator, deciding which tools to invoke next based on user input. The tools include subfinder, httpx, gau, trufflehog, nuclei, nmap and more via a multi-container MCP server architecture. Designed for authorized bug bounty and pentest engagements.",
